@@ -1,0 +1,21 @@
+22:20:32 **** Incremental Build of configuration Debug for project 1-GPIO ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32H503xx -c -I../Core/Inc -I../Drivers/STM32H5xx_HAL_Driver/Inc -I../Drivers/STM32H5xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H5xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "1-GPIO.elf" @"objects.list"   -mcpu=cortex-m33 -T"D:\Piyush personal\self project\1-GPIO\STM32H503RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="1-GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 1-GPIO.elf
+ 
+arm-none-eabi-size  1-GPIO.elf 
+arm-none-eabi-objdump -h -S 1-GPIO.elf  > "1-GPIO.list"
+   text	   data	    bss	    dec	    hex	filename
+   7240	     12	   1572	   8824	   2278	1-GPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: 1-GPIO.list
+ 
+22:20:42 **** Incremental Build of configuration Debug for project 1-GPIO ****
+make -j8 all 
+arm-none-eabi-size  1-GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7240	     12	   1572	   8824	   2278	1-GPIO.elf
+Finished building: default.size.stdout
+ 
